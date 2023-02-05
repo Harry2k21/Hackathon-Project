@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="overlay"></div>
+    <div class="App">
+        <h1>Info</h1>
+        <div id="box">
+            <img src="images/{{path}}" alt="{{name}}" />
+        </div>
+        <p>Name:</p>
+        <p id="name">{{name}}</p>
+        <p>Count:</p>
+        <p id="count">{{count}}</p>
+        <p>Calories:</p>
+        <p id="calories">{{calories}}</p>
+        <p>Carbohydrates:</p>
+        <p id="carbs">{{carbs}}</p>
+        <p>Sugar:</p>
+        <p id="sugar">{{sugar}}</p>
+        <p>Protein:</p>
+        <p id="protein">{{protein}}</p>
+
+    </div>
+{% endblock %}

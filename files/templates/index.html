@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="overlay"></div>
+    <div class="App">
+        <h1>Jerry is hungry, feed him an image. </h1>
+        <img src="{% static 'dino.png' %}" alt="dino" />
+        <div class="Logo"></div>
+        <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+            {{ imgform.as_p }}
+            <button type="submit">Upload Image</button>
+        </form>
+    </div>
+{% endblock %}
